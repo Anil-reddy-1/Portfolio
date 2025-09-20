@@ -1,0 +1,28 @@
+.contact-section {
+    padding: 20px;
+   
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+   
+    border-radius: 8px;
+}
+.wf-form{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    max-width: 1000px;
+    
+}
+.field{
+    width:80%;
+    font-size: 1.8rem;
+    font-weight: 700;
+
+}
+.wf-form button{
+    align-self: center;
+}

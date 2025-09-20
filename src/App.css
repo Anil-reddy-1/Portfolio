@@ -1,0 +1,141 @@
+/* Wireframe style: simple, grayscale, dashed borders, flexible layout */
+.show{
+  visibility: visible;
+}
+.hide{
+  visibility: hidden;
+}
+body {
+  font-family: system-ui, Arial, sans-serif;
+}
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+}
+
+.wf-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  border-bottom: 2px dashed #888;
+  background: #111;
+  color: #eee;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.logo{
+  height: 40px;
+  width: 40px;
+  border-width: 1px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.wf-nav a {
+  color: #ccc;
+  margin-left: 1rem;
+  font-size: 0.9rem;
+  text-decoration: none;
+  position: relative;
+}
+.wf-nav a:hover { color: #fff; }
+
+.wf-main {
+  flex: 1;
+  
+  margin: 0 auto;
+  padding: 2rem 1.25rem 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.section {
+  border: 2px dashed #555;
+  padding: 1.5rem 1.5rem 2rem;
+  border-radius: 10px;
+  background: #1d1d1d;
+}
+
+
+
+.btn-row { display: flex; gap: 0.75rem; margin-top: 1rem; }
+
+button {
+  background: #222;
+  color: #eee;
+  border: 2px dashed #666;
+  padding: 0.6rem 1.1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: 500;
+  transition: background .2s, color .2s, border-color .2s;
+}
+button:hover { background: #333; border-color: #999; }
+button.secondary { background: #151515; }
+button.secondary:hover { background: #262626; }
+
+
+
+.wf-list { list-style: none; padding: 0; margin: 0; display: grid; gap: .5rem; }
+.wf-list li { border: 1px dashed #555; padding: .6rem .8rem; border-radius: 6px; background:#202020; }
+
+
+
+.wf-form { display:grid; gap:1rem; max-width:520px; }
+.field { display:flex; flex-direction:column; gap:.4rem; }
+label { font-size:.75rem; letter-spacing:.5px; text-transform:uppercase; color:#aaa; }
+input, textarea {
+  background:#181818;
+  color:#eee;
+  border:1px dashed #555;
+  padding:.65rem .75rem;
+  border-radius:6px;
+  resize:vertical;
+  font-family:inherit;
+}
+input:focus, textarea:focus { outline:2px solid #555; }
+.actions { display:flex; justify-content:flex-start; }
+
+.wf-footer {
+  text-align:center;
+  padding:1.5rem 1rem;
+  font-size:.75rem;
+  letter-spacing:1px;
+  color:#666;
+  border-top:2px dashed #333;
+  background:#0f0f0f;
+}
+.headings{
+  text-align: center;
+  color: #ccc;
+  padding-left: 20px;
+  align-self: start;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+/* Hero specific tweaks */
+
+
+
+@media (max-width: 640px) {
+  .wf-header { justify-content: center; }
+  .wf-nav a { margin: 0 .6rem; }
+  .wf-main { padding:1.5rem 1rem 2.5rem; }
+}

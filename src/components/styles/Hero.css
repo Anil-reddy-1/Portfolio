@@ -1,0 +1,124 @@
+.hero-section { 
+  align-self: center;
+  display: flex;
+  width: 95vw;
+  height: 80vh;
+  justify-content: space-around;
+  margin: 10px; 
+}
+#hero .btn-row { flex-wrap:wrap; }
+
+.hero-img{
+  width: 250px;
+  height: 250px;
+  margin: 20px;
+  align-self: center;
+  transform:rotate(40deg);
+  border-radius: 6px;
+  border: 2px dashed #555;
+  transition: transform 0.5s, box-shadow 0.4s;
+  box-shadow:
+    5px 8px 20px rgba(59,157,249,0.10);
+
+  
+}
+
+
+
+
+.hero-img:hover{
+ 
+  box-shadow:
+    0 2px 8px rgba(59,157,249,0.10),
+    0 8px 24px rgba(59,157,249,0.18),
+    0 16px 48px rgba(59,157,249,0.15);
+  
+}
+
+.hero-discript{
+  border-radius: 6px;
+  font-size: 1rem;
+  width: 60%;
+  height: 60%;
+  margin: 12px;
+  box-shadow: 0 0 10px #222;
+  overflow: hidden;
+   align-self: center;
+  border: 2px dashed #555;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  transform: rotate(1deg);
+  transition: box-shadow 0.5s;
+  
+}
+
+
+.hero-discript:hover{
+  transform: rotate(0deg);
+  
+  box-shadow:
+    0 2px 8px rgba(59,157,249,0.10),
+    0 8px 24px rgba(59,157,249,0.18),
+    0 16px 48px rgba(59,157,249,0.15);
+}
+
+.greeting{
+  font-size: 1.4rem;
+  color: #bbb;
+  text-align: left;
+  padding: 8px;
+  margin: 8px;
+  margin-top: 16px;
+}
+
+.hero-discription{ 
+  padding: 4px;
+  margin: 4px;
+  text-indent: 10px;
+letter-spacing: 0.5px;
+ text-align: left;
+}
+.contact-button{
+  align-self: center;
+}
+.toggle-button{
+  position: absolute;
+  top: 130px;
+  right: 50px;
+ 
+}
+
+
+
+
+
+.section.show .hero-img{
+    animation: sliding 1.5s  ease 0.2s 1 normal forwards;
+}
+
+
+
+@keyframes sliding {
+  from {opacity: 0;transform: translateX(-100px) rotate(0deg);}
+  to {opacity: 1;transform: translateX(0) rotate(40deg);}
+}
+
+.section.show .hero-discript{
+  animation: discriptAnimation 1.5s ease 0.2s 1 normal forwards;
+}
+
+@keyframes discriptAnimation {
+  from {opacity: 0;transform: translateX(200px) rotate(20deg);}
+  to {opacity: 1;transform: translateX(0px) rotate(0deg);
+  }
+}
+
+.section.show .toggle-button{
+   animation: togglebutton 1.5s ease 0.2s forwards;
+} 
+
+@keyframes togglebutton {
+  from {transform: translateY(-100px);}
+  to {transform: translateY(0px);}
+}
