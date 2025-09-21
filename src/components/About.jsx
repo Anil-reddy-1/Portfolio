@@ -1,8 +1,67 @@
 import React from 'react'
 import './styles/About.css'
+import { useGSAP } from '@gsap/react'
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/all';
 
+gsap.registerPlugin(ScrollTrigger);
 function About() {
-  
+
+
+  useGSAP(()=>{
+    const timeline = gsap.timeline({
+      scrollTrigger:{
+        trigger:'.about-section',
+        start:'top 70%',
+        end:'bottom top',
+        
+      }
+    }
+    )
+
+    timeline.fromTo('.sec1',{
+      y:20,
+      opacity:0,
+      duration:0.5,
+
+    },{
+      y:0,
+      opacity:1,
+      ease:'power1.in '  
+    })
+
+    timeline.fromTo('.discription ,.contact-button',{
+      x:-100,
+      opacity:0,
+      duration:1,
+    },{
+      x:0,
+      opacity:1,
+      
+    });
+
+    timeline.fromTo('.links',{
+      x:100,
+      opacity:0,
+      duration:1,
+    },{
+      x:0,
+      opacity:1,
+      ease:'power1.in'
+    })
+    timeline.fromTo('.link-list li',{
+      y:20,
+      opacity:0,
+      duration:.7,
+      ease:'expo.in'
+    },{
+      y:0,
+      opacity:1,
+      stagger:0.05
+    })
+
+  },[])
+
   return (
     <div className='about-section section ' id='about'>
         <h2 className='headings'>About Me</h2>

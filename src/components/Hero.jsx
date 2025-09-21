@@ -8,7 +8,7 @@ import { SplitText } from 'gsap/all';
 function Hero() {
 
   useGSAP(() => {
-    const timeline = gsap.timeline({start:'top top', end:'bottom top', scrub:1})
+    const timeline = gsap.timeline({})
     const greeting = new SplitText(".greeting",{type:'chars,words'});
     timeline.fromTo('.hero-img',{
       opacity:0,

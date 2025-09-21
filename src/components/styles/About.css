@@ -19,13 +19,9 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    animation: sec1topdown 1.5s ease 0.2s forwards;
+  
     margin: auto 10px;
     overflow: hidden;
- }
- @keyframes sec1topdown {
-    from {opacity: 0; transform: translateY(-20px);}
-    to {opacity: 1; transform: translateY(0);}
  }
 
 
@@ -51,13 +47,9 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    animation: sec2lefttoright 1.5s ease 0.2s forwards;
+  
  }
- @keyframes sec2lefttoright {
-    from {opacity: 0; transform: translateX(-80px);}
-    to {opacity: 1; transform: translateX(0);}
-   
- }
+
  .links{
     width: 30%;height: 100%;
     font-size: 1.3rem;
@@ -70,13 +62,10 @@
    border: 2px dashed #555;
    border-radius: 12px;
    padding: 10px;
-   animation: sec2righttoleft 1.5s ease 0.2s forwards;
+   
  }
 
- @keyframes sec2righttoleft {
-    from {opacity: 0; transform: translateX(80px);}
-    to {opacity: 1; transform: translateX(0);}
-   }
+
 
  .contact-button{
     align-self: center;
