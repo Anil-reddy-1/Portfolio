@@ -1,9 +1,62 @@
 import React from 'react'
 import './styles/Hero.css'
-
+import { useGSAP } from '@gsap/react'
+import gsap from 'gsap';
 
 
 function Hero() {
+
+  useGSAP(() => {
+    const timeline = gsap.timeline({start:'top top', end:'bottom top', scrub:1})
+    timeline.fromTo('.hero-img',{
+      opacity:0,
+      y:350,
+      duration:1.5,
+      ease:'power1.out'
+      
+    },{
+      opacity:1,
+      y:0,
+      
+    })
+    timeline.fromTo('.hero-discript',{
+      opacity:0,
+      x:350,
+      duration:1.5,
+    },{
+      opacity:1,
+      x:0,
+    });
+    timeline.fromTo('.greeting',{
+      opacity:0,
+      y:50,},{
+      opacity:1,
+      y:0,
+      duration:1,
+      ease:'power1.out'
+    });
+    timeline.fromTo('.contact-button',{ 
+      opacity:0,
+      y:50,
+      duration:1,
+      ease:'power1.out'
+    },{
+      opacity:1,
+      y:0,
+    });
+    gsap.fromTo('.toggle-button',{
+      y:-60,
+      opacity:0,
+      duration:1.4,
+      ease:"bounce.inOut",
+    },{
+      y:0,
+      opacity:1,
+    })
+  }, [])
+
+
+
   return (
     <div className="hero-section section">
           <div className='toggle-button'><button>Brightmode</button></div>
