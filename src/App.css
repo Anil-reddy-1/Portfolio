@@ -20,13 +20,19 @@ body {
   align-items: center;
   justify-content: space-between;
   position: sticky;
-  top:0%;
+  top: 0%;
+  backdrop-filter: blur(0px) saturate(180%);
   padding: 1rem 2rem;
-  border-bottom: 2px dashed #888;
-  background: #111;
+  border-bottom: 2px dashed rgba(136, 136, 136, 0.3);
+  background: rgba(17, 17, 17, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
   color: #eee;
   flex-wrap: wrap;
   gap: 1rem;
+  z-index: 50;
 }
 .logo{
   height: 40px;

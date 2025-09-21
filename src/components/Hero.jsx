@@ -2,23 +2,25 @@ import React from 'react'
 import './styles/Hero.css'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap';
+import { SplitText } from 'gsap/all';
 
 
 function Hero() {
 
   useGSAP(() => {
     const timeline = gsap.timeline({start:'top top', end:'bottom top', scrub:1})
+    const greeting = new SplitText(".greeting",{type:'chars,words'});
     timeline.fromTo('.hero-img',{
       opacity:0,
       y:350,
       duration:1.5,
       ease:'power1.out'
-      
     },{
       opacity:1,
       y:0,
       
-    })
+    });
+
     timeline.fromTo('.hero-discript',{
       opacity:0,
       x:350,
@@ -27,23 +29,19 @@ function Hero() {
       opacity:1,
       x:0,
     });
-    timeline.fromTo('.greeting',{
+
+    gsap.fromTo(greeting.chars,{
       opacity:0,
-      y:50,},{
-      opacity:1,
-      y:0,
-      duration:1,
-      ease:'power1.out'
-    });
-    timeline.fromTo('.contact-button',{ 
-      opacity:0,
-      y:50,
-      duration:1,
-      ease:'power1.out'
+      y:-20,
     },{
       opacity:1,
       y:0,
-    });
+      duration:1,
+      delay:0.7,
+      stagger:0.05,
+      ease:'power1.out'
+    },"-=1");
+    
     gsap.fromTo('.toggle-button',{
       y:-60,
       opacity:0,

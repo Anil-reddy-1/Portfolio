@@ -9,7 +9,10 @@ import Footer from './components/Footer';
 import Contact from './components/contact';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/all';
 
+
+gsap.registerPlugin(ScrollTrigger);
 // Basic wireframe section components (can later be replaced with real content)
 const Section = ({ id, title, children }) => (
   <section id={id} className="wf-section">
@@ -20,30 +23,6 @@ const Section = ({ id, title, children }) => (
 
 
 function App() {
-  
-  useGSAP(()=>{
-        const timeline =gsap.timeline({start:'top top'})
-        timeline.to('.wf-header',{
-          y:50,
-          opacity:0,
-          duration:0.5,
-           ease:"expo.out"
-        });
-        timeline.to('.wf-header',{
-          opacity:1,
-          y:-20,
-          duration:0.85,
-         
-          ease:'bounce.out'
-        })
-        timeline.to('.wf-header',{
-          duration:.5,
-          y:0,
-          ease:'backin'
-        })
-      },[])
-  
-
 
 
   return (

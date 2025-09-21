@@ -2,6 +2,7 @@ import React from 'react'
 import './styles/About.css'
 
 function About() {
+  
   return (
     <div className='about-section section ' id='about'>
         <h2 className='headings'>About Me</h2>
