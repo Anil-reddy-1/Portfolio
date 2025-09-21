@@ -30,7 +30,7 @@ function About() {
       ease:'power1.in '  
     })
 
-    timeline.fromTo('.discription ,.contact-button',{
+    timeline.fromTo('.discription ,.discription button',{
       x:-100,
       opacity:0,
       duration:1,
