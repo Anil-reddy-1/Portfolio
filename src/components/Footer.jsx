@@ -8,21 +8,7 @@ import gsap from  'gsap';
 
 
 function Footer() {
-  useGSAP(()=>{
-    const timeline =gsap.timeline({start:'top top'})
-    timeline.to('.wf-footer',{
-      y:500,
-      opacity:0,
-    });
-    timeline.to('.wf-footer',{
-      y:-200,
-      ease:"bounce.inOut"
-    })
-    timeline.to('.wf-footer',{
-      y:0,
-      ease:'backin'
-    })
-  },[])
+  
   return (
     <footer className="wf-footer">
       <div className="buttons">
@@ -36,7 +22,7 @@ function Footer() {
           <img src={Insta} alt="" className='bottom-image'/>
         </a>
         <a href="">
-          <img src="" alt="" className='bottom-image'/>
+          <img src={null} alt="" className='bottom-image'/>
         </a>
       </div>
       <div className="bottom">

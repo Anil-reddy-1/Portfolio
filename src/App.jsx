@@ -7,6 +7,8 @@ import Exp from './components/Exp';
 import Skills from './components/Skills';
 import Footer from './components/Footer';
 import Contact from './components/contact';
+import { useGSAP } from '@gsap/react';
+import gsap from 'gsap'
 
 // Basic wireframe section components (can later be replaced with real content)
 const Section = ({ id, title, children }) => (
@@ -18,30 +20,28 @@ const Section = ({ id, title, children }) => (
 
 
 function App() {
-  useEffect(()=>{
-    const observer = new IntersectionObserver((entries)=>{
-    entries.forEach((entry)=>{
-      if(entry.isIntersecting){
-        entry.target.classList.remove('hide');
-        entry.target.classList.add('show');
-      }else{
-        entry.target.classList.add('hide');
-        entry.target.classList.remove('show');
-      }
-    });
-  },{});
-    const sections = document.querySelectorAll('section');
-    sections.forEach((section )=> {
-       section.classList.add('hide');
-      observer.observe(section);
-     
-    });
-
-    // Cleanup 
-    return () => {
-      sections.forEach(section => observer.unobserve(section));
-    };
-  },[])
+  
+  useGSAP(()=>{
+        const timeline =gsap.timeline({start:'top top'})
+        timeline.to('.wf-header',{
+          y:50,
+          opacity:0,
+          duration:0.5,
+           ease:"expo.out"
+        });
+        timeline.to('.wf-header',{
+          opacity:1,
+          y:-20,
+          duration:0.85,
+         
+          ease:'bounce.out'
+        })
+        timeline.to('.wf-header',{
+          duration:.5,
+          y:0,
+          ease:'backin'
+        })
+      },[])
   
 
 
