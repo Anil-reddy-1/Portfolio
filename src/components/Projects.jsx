@@ -2,20 +2,59 @@ import React from 'react'
 import './styles/Projects.css'
 import data from '../data/data.js'
 import todoImg from '../assets/todo.png'
-
-function Projects() {
+import { useGSAP } from '@gsap/react'
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+function Projects() { 
+  useGSAP(()=>{
+    const tl=gsap.timeline({
+      scrollTrigger:{
+      trigger:'.projects-section',
+      start:'top 80%',
+      end:'bottom bottom',
+      scrub:true,
+      onComplete: () => {
+          // Disable ScrollTrigger after completion to prevent reverse
+          ScrollTrigger.getById('projects-trigger')?.kill();
+        },
+      id: 'projects-trigger'
+    }
+    })
+     data.forEach((_, index) => {
+      let yvalue=0;
+  const direction = (index+1) % 2 === 0 ? (index+1)%3==0?-100:0 : 100; // Alternate left/right
+  if (direction==0){ 
+     yvalue=100;
+  }
+  tl.fromTo(`.project-card:nth-child(${index + 1})`, {
+    opacity: 0,
+    x: direction,
+    y:yvalue
+  }, {
+    opacity: 1,
+    x: 0,
+    y:0,
+    
+    ease: 'power2.out'
+  });
+});
+  },[])
 
   return (
     <div className='section projects-section'>
       <h1>Projects</h1>
-            <div className="grid projects-grid">
-              {data.map((item) => (
-                <div key={item.id} className="wf-box project-card">
+            <div className="container projects-grid">
+              
+              {data.map((item,index)=>(
+                <div key={item.id} className="wf-box project-card" >
                   <img src={todoImg} alt="Image " />
-                  <h3 className='title'>{item.title}</h3>
+                  <h3 className='title'>{item.title} </h3>
                   <p className='discript'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui, quis?</p>
                 </div>
               ))}
+                
+                
+                
             </div>
     </div>
   )

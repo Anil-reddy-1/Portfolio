@@ -4,18 +4,39 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 1rem;
+  
+  gap: 1rem; 
 }
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; /* allow items to wrap to next row */
+  gap: 1rem;       /* optional spacing between boxes */
+}
+.col-1 { flex: 0 0 8.3333%;  max-width: 8.3333%; }   /* 1/12 */
+.col-2 { flex: 0 0 16.6667%; max-width: 16.6667%; }  /* 2/12 */
+.col-3 { flex: 0 0 25%;      max-width: 25%; }       /* 3/12 */
+.col-4 { flex: 0 0 33.3333%; max-width: 33.3333%; }  /* 4/12 */
+.col-5 { flex: 0 0 41.6667%; max-width: 41.6667%; }  /* 5/12 */
+.col-6 { flex: 0 0 50%;      max-width: 50%; }       /* 6/12 */
+.col-7 { flex: 0 0 58.3333%; max-width: 58.3333%; }  /* 7/12 */
+.col-8 { flex: 0 0 66.6667%; max-width: 66.6667%; }  /* 8/12 */
+.col-9 { flex: 0 0 75%;      max-width: 75%; }       /* 9/12 */
+.col-10{ flex: 0 0 83.3333%; max-width: 83.3333%; }  /* 10/12 */
+.col-11{ flex: 0 0 91.6667%; max-width: 91.6667%; }  /* 11/12 */
+.col-12{ flex: 0 0 100%;     max-width: 100%; }      /* full width */
+
 
 
 /* Increase specificity to override global .wf-box if needed */
-.projects-section .wf-box {
+ .wf-box {
   border: 2px dashed #666;
   width: 350px;
-  min-height: 120px;
+  height: auto;
   display: flex;
   flex-wrap: wrap;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   background: #262626;
@@ -23,8 +44,19 @@
   font-size: 0.9rem;
   border-radius: 8px;
   padding: 6px;
+  transition: transform 0.5s, box-shadow 0.4s ;
+ 
 }
 
+
+.wf-box:hover {
+  transform: translateY(-10px);
+    box-shadow:
+        0 2px 8px rgba(59,157,249,0.10),
+        0 8px 24px rgba(59,157,249,0.18),
+        0 16px 48px rgba(59,157,249,0.15);
+
+}
 .discript {
   font-size: 0.85rem;
   color: #ccc;

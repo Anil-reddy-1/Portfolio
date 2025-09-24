@@ -23,12 +23,16 @@
     border-width: 5px;
     border-color: rgb(23, 122, 242);
     border-radius: 8px;
+    
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.4s ;
+}
+.card:hover{
+    transform: translateY(-10px);
     box-shadow:
         0 2px 8px rgba(59,157,249,0.10),
         0 8px 24px rgba(59,157,249,0.18),
         0 16px 48px rgba(59,157,249,0.15);
-    width: 300px;
-    padding: 20px;
-    text-align: center;
-    transition: transform 0.2s;
 }

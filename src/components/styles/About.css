@@ -47,14 +47,16 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    transition:  box-shadow 0.4s;
+    transition:  box-shadow 0.4s,transform 0.4s;
  }
   .discription:hover {
     border-color: #777;
+    transform: translateY(-10px);
     box-shadow:
     0 2px 8px rgba(59,157,249,0.10),
     0 8px 24px rgba(59,157,249,0.18),
     0 16px 48px rgba(59,157,249,0.15);
+    
   }
 
  .links{
@@ -69,7 +71,7 @@
    border: 2px dashed #555;
    border-radius: 12px;
    padding: 10px;
-   transition:  box-shadow 0.4s;
+   transition:  box-shadow 0.4s,transform 0.4s;
  }
 .links:hover {
     border-color: #777;
@@ -77,6 +79,7 @@
     0 2px 8px rgba(59,157,249,0.10),
     0 8px 24px rgba(59,157,249,0.18),
     0 16px 48px rgba(59,157,249,0.15);
+    transform: translateY(-4px);
   }
 
 
