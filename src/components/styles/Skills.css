@@ -23,7 +23,7 @@
     border: 2px dashed #555;
   padding: 1.5rem 1.5rem 2rem;
   border-radius: 10px;
-  background: #1d1d1d;
+ 
 
 }
 .job-title {
@@ -56,12 +56,11 @@
     border-radius: 999px; 
     font-size:1rem; 
     letter-spacing:.5px; 
-    background:#222; 
-    color:#ccc; 
+   
 }
 .tag:hover { 
-    border-color:#aaa; 
-    color:#fff; 
+    
+   
 }
 
 .carousel-btn{
@@ -72,8 +71,7 @@
     height: 40px;
     width: 40px;
     border-radius: 6px;
-    background: #222;
-    color: #eee;
+   
 
     border: 2px dashed #666;
     overflow: hidden;

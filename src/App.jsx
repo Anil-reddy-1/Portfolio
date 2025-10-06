@@ -10,6 +10,7 @@ import Contact from './components/contact';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/all';
+import MyJourney from './components/My-Journey';
 
 
 gsap.registerPlugin(ScrollTrigger);
@@ -49,6 +50,7 @@ function App() {
           <Exp/>
           <Skills/>
           <Contact/>
+          <MyJourney/>
         </main>
         <Footer/>
       </div>

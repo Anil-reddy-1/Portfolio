@@ -4,7 +4,7 @@ import data from '../data/data.js'
 import todoImg from '../assets/todo.png'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
 function Projects() { 
   useGSAP(()=>{
     const tl=gsap.timeline({
@@ -13,11 +13,12 @@ function Projects() {
       start:'top 80%',
       end:'bottom bottom',
       scrub:true,
+      id: 'projects-trigger',
       onComplete: () => {
           // Disable ScrollTrigger after completion to prevent reverse
           ScrollTrigger.getById('projects-trigger')?.kill();
         },
-      id: 'projects-trigger'
+      
     }
     })
      data.forEach((_, index) => {

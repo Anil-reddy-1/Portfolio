@@ -13,8 +13,8 @@ function About() {
       scrollTrigger:{
         trigger:'.about-section',
         start:'top 70%',
-        end:'bottom top',
-        
+        end:'bottom 90%',
+        scrub:true,
       }
     }
     )
@@ -22,7 +22,7 @@ function About() {
     timeline.fromTo('.sec1',{
       y:20,
       opacity:0,
-      duration:0.5,
+      
 
     },{
       y:0,
@@ -33,7 +33,7 @@ function About() {
     timeline.fromTo('.discription ,.discription button',{
       x:-100,
       opacity:0,
-      duration:1,
+     
     },{
       x:0,
       opacity:1,
@@ -43,7 +43,7 @@ function About() {
     timeline.fromTo('.links',{
       x:100,
       opacity:0,
-      duration:1,
+      
     },{
       x:0,
       opacity:1,
@@ -52,7 +52,7 @@ function About() {
     timeline.fromTo('.link-list li',{
       y:20,
       opacity:0,
-      duration:.7,
+ 
       ease:'expo.in'
     },{
       y:0,

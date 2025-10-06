@@ -12,6 +12,8 @@
 .wf-form{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 15px;
     width: 100%;
     max-width: 1000px;
