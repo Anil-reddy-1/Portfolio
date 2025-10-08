@@ -18,7 +18,7 @@ function Contact() {
                 <label>Message</label>
                 <textarea rows={4} placeholder="Hi..." />
               </div>
-              <div className="actions">
+              <div className="actions field">
                 <button type="submit" >Send</button>
               </div>
             </form>

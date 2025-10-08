@@ -21,7 +21,7 @@
 }
 .card{
     border-width: 5px;
-    border-color: rgb(23, 122, 242);
+    border: 2px solid #454545;
     border-radius: 8px;
     
     width: 300px;
@@ -30,6 +30,7 @@
     transition: transform 0.2s, box-shadow 0.4s ;
 }
 .card:hover{
+    border-color: rgb(23, 122, 242);
     transform: translateY(-10px);
     box-shadow:
         0 2px 8px rgba(59,157,249,0.10),

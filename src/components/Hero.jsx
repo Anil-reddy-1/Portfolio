@@ -1,9 +1,9 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import './styles/Hero.css'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap';
 import { SplitText } from 'gsap/all';
-
+import { ThemeContext } from '../contexts/ThemeContext.tsx';
 
 function Hero() {
 
@@ -53,11 +53,19 @@ function Hero() {
     })
   }, [])
 
+  const Theme=useContext(ThemeContext);
+  function toggle(){
+    if(Theme.theme=='Dark'){
+      Theme.setTheme("Bright");
+    }else{
+      Theme.setTheme("Dark");
+    }
+  }
 
 
   return (
     <div className="hero-section section">
-          <div className='toggle-button'><button>Brightmode</button></div>
+          <div className={Theme.theme=='Dark'?'toggle-button Bright':'toggle-button Dark'}><button onClick={toggle}>Brightmode</button></div>
             <div className="hero-img">
 
             </div>
