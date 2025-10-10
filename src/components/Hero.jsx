@@ -4,9 +4,9 @@ import { useGSAP } from '@gsap/react'
 import gsap from 'gsap';
 import { SplitText } from 'gsap/all';
 import { ThemeContext } from '../contexts/ThemeContext.tsx';
-
+ 
 function Hero() {
-
+ 
   useGSAP(() => {
     const timeline = gsap.timeline({})
     const greeting = new SplitText(".greeting",{type:'chars,words'});
