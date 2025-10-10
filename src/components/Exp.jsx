@@ -55,7 +55,7 @@ tl.call(()=>{
 },[])
 
   return (
-    <div className='section exp-section'>
+    <div className='section exp-section' id='experience'>
       <h1>Experience</h1>
         <div className='exp-container'>
 

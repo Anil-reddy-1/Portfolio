@@ -3,7 +3,7 @@ import './styles/Contact.css'
 
 function Contact() {
   return (
-    <div className='section contact-section'>
+    <div className='section contact-section' id='contact'>
       <h1>Contact Me</h1>
             <form className="wf-form" onSubmit={e => e.preventDefault()}>
               <div className="field" required={true} >

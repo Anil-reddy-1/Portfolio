@@ -42,7 +42,7 @@ function Projects() {
   },[])
 
   return (
-    <div className='section projects-section'>
+    <div className='section projects-section' id='projects'>
       <h1>Projects</h1>
             <div className="container projects-grid">
               

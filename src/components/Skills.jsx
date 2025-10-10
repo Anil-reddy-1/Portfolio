@@ -15,7 +15,7 @@ function Skills() {
   }
 
   return (
-    <div className='section skills-section'>
+    <div className='section skills-section' id='skills'>
       <h1>Skills</h1>
 
             <div className="skills-container">

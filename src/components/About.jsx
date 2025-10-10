@@ -57,7 +57,7 @@ function About() {
     },{
       y:0,
       opacity:1,
-      stagger:0.05
+      stagger:0.05 
     })
 
   },[])
