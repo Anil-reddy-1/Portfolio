@@ -17,51 +17,51 @@ function Skills() {
   return (
     <div className='section skills-section' id='skills'>
       <h1>Skills</h1>
-
             <div className="skills-container">
               <div className="role-section">
                 <div className="job-title">
-                  <h2>
+                  
                     Frontend Developer
-                  </h2>
+                  
                   </div>
                   
                     <div className="tag-cloud">
-                       <button className="carousel-btn" onClick={prevSlide}>‹</button>
-                  {[
-                  ...frontData.slice(curr, curr + viscount),
-                  ...(curr + viscount > frontData.length
-                    ? frontData.slice(0, (curr + viscount) % frontData.length)
-                    : [])
-                ].map(tag => (
-                  <div key={tag} className="tag">{tag}</div>
+                       
+                  {frontData.map(tag => (
+                  <div key={tag} className="tag">
+                    <img src={tag} alt={tag} className='tag-img' />
+                  </div>
                 ))}
-                <button className="carousel-btn" onClick={nextSlide}>›</button>
+                
               </div>
               </div>
 
               <div className="role-section">
                 <div className="job-title">
-                  <h2>
+                  
                     Backend Developer
-                  </h2>
+                  
                   </div>
                     <div className="tag-cloud">
                 {['NodeJS','Firebase',].map(tag => (
-                  <div key={tag} className="tag">{tag}</div>
+                  <div key={tag} className="tag">
+                    <img src={tag} alt={tag} className='tag-img' />
+                  </div>
                 ))}
               </div>
               </div>
 
               <div className="role-section">
                 <div className="job-title">
-                  <h2>
+                  
                     Mobile App Developer
-                  </h2>
+                  
                   </div>
                     <div className="tag-cloud">
                 {['React Native','Expo'].map(tag => (
-                  <div key={tag} className="tag">{tag}</div>
+                  <div key={tag} className="tag">
+                    <img src={tag} alt={tag} className='tag-img' />
+                  </div>
                 ))}
               </div>
               </div>
