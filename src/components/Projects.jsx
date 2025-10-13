@@ -6,6 +6,9 @@ import { useGSAP } from '@gsap/react'
 import gsap from 'gsap';
 
 function Projects() { 
+
+const {projectsData}=data;
+
   useGSAP(()=>{
     const tl=gsap.timeline({
       scrollTrigger:{
@@ -21,7 +24,7 @@ function Projects() {
       
     }
     })
-     data.forEach((_, index) => {
+     projectsData.forEach((_, index) => {
       let yvalue=0;
   const direction = (index+1) % 2 === 0 ? (index+1)%3==0?-100:0 : 100; // Alternate left/right
   if (direction==0){ 
@@ -46,11 +49,11 @@ function Projects() {
       <h1>Projects</h1>
             <div className="container projects-grid">
               
-              {data.map((item,index)=>(
-                <div key={item.id} className="wf-box project-card" >
+              {projectsData.map((item,index)=>(
+                <div key={item.id}  className="wf-box project-card" >
                   <img src={todoImg} alt="Image " />
                   <h3 className='title'>{item.title} </h3>
-                  <p className='discript'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui, quis?</p>
+                  <p className='discript'>{item.description}</p>
                 </div>
               ))}
                 

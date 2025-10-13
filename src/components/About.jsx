@@ -76,21 +76,21 @@ function About() {
            <div className="sec2">
             <div className="discription">
               <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque excepturi deleniti,
-                 tempora voluptates exercitationem quas. Ea id repudiandae blanditiis officiis neque eaque repellendus
-                  corrupti omnis recusandae quaerat numquam cum quibusdam dolorum dolores ipsam nostrum odio sed quisquam ducimus, 
-                beatae quae rem. Voluptatem, suscipit at magni animi commodi iure pariatur accusamus?
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex rem voluptatum consequuntur sunt similique laudantium, expedita unde
-                 ullam ratione consectetur cum aspernatur. Maiores laborum porro incidunt reiciendis amet sapiente inventore.
-              </p>
+                 I'm a dedicated Computer Science Engineering student with
+                  exceptional academic performance and hands-on experience in modern web technologies.
+                   My journey started with mastering programming fundamentals in Java and Python, 
+                   evolving into full-stack development with React.js and React Native. <br />
+                  I've successfully built responsive e-commerce platforms, cross-platform mobile applications,
+                   and integrated real-time APIs. With a strong foundation in problem-solving and quick learning ability, I'm passionate about creating user-centric applications that make a difference. My goal is to build a successful career in a challenging environment where I can apply my skills and contribute to organizational success.
+               </p>
               <button className='contact-button'>Contact me</button>
             </div>
             <div className="links">
               <h3>Connect With Me</h3>
               <ul className='link-list'>
-                <li>Github: <a href="" className='link'>anil-reddy-1</a></li>
-                <li>Linkedin: <a href="" className='link'>Patti Anil Reddy</a></li>
-                <li>LeetCode: <a href="" className='link'>anil-reddy</a></li>
+                <li>Email: <a href="mailto:anilreddy5251@gmail.com" className='link'>anilreddy5251@gmail.com</a></li>
+                <li>GitHub: <a href="https://github.com/Anil-reddy-1/" className='link'>Anil-reddy-1</a></li>
+                <li>LinkedIn: <a href="https://www.linkedin.com/in/anil-reddy-546430331/" className='link'>Patti Anil Reddy</a></li>
                 <li>Resume: <a href="" className='link'>resume</a></li>
                 
               </ul>

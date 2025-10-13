@@ -70,17 +70,15 @@ function Hero() {
 
             </div>
             <div className="hero-discript">
-              <h3 className='greeting'>Hi Im Anil </h3>
-              <p className='hero-discription'>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  aliquid, quas quia aperiam fuga eveniet ipsam ea veritatis odio omnis
-                   libero illo saepe harum aliquam illum minima esse culpa tempora rerum 
-                   accusantium! At, libero repellat ex nisi fuga adipisci ab quisquam aut, 
-                   voluptate ad earum doloribus nostrum illo vitae excepturi. Praesentium sapiente, 
-                   magni eius quae sunt vel cum nam aliquid, fugiat cupiditate sit laboriosam reiciendis delectus
-                   </p>
+              <h3 className='greeting'>Hi, I'm Patti Anil Reddy </h3>
+              <p className='hero-discription'> A passionate Computer Science student pursuing BTech at Vardhaman 
+                College of Engineering with a stellar 9.4 CGPA. Specializing in full-stack web development with React.js,
+                 React Native, and modern JavaScript. Building innovative e-commerce platforms and mobile applications while 
+                 continuously learning cutting-edge technologies.
+               </p>
               
                 
-                <button className="contact-button">Secondary</button>
+                <button href="#contact" className="contact-button">contact</button>
               
             </div>
             
