@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './styles/Projects.css'
 import data from '../data/data.js'
 import todoImg from '../assets/todo.png'
@@ -44,9 +44,31 @@ const {projectsData}=data;
 });
   },[])
 
+
+  useEffect(() => {
+    const cards = document.querySelectorAll('.project-card'); // Fixed: Added dot
+    
+    const handleCardClick = (e) => {
+      const cardIndex = Array.from(cards).indexOf(e.currentTarget);
+      const projectUrl = projectsData[cardIndex]?.github || 'https://github.com/Anil-reddy-1';
+      window.open(projectUrl, '_blank');
+    };
+    cards.forEach((card) => {
+      card.addEventListener('click', handleCardClick);
+    });
+
+    // Cleanup 
+    return () => {
+      cards.forEach((card) => {
+        card.removeEventListener('click', handleCardClick);
+      });
+    };
+  }, [projectsData]);
+  
+
   return (
     <div className='section projects-section' id='projects'>
-      <h1>Projects</h1>
+      <h1 className='Tittle'>Projects</h1>
             <div className="container projects-grid">
               
               {projectsData.map((item,index)=>(
@@ -56,9 +78,7 @@ const {projectsData}=data;
                   <p className='discript'>{item.description}</p>
                 </div>
               ))}
-                
-                
-                
+   
             </div>
     </div>
   )

@@ -64,7 +64,7 @@ function About() {
 
   return (
     <div className='about-section section ' id='about'>
-        <h2 className='headings'>About Me</h2>
+        <h2 className='Tittle'>About Me</h2>
            <div className="sec1">
             <div className="name">
               <h3>Patti Anil Reddy</h3>

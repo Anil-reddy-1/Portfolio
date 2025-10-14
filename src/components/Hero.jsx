@@ -67,16 +67,16 @@ function Hero() {
     <div className="hero-section section">
           <div className={Theme.theme=='Dark'?'toggle-button Bright':'toggle-button Dark'}><button onClick={toggle}>Brightmode</button></div>
             <div className="hero-img">
-
+              <img src="" alt="My Picture"  />
             </div>
             <div className="hero-discript">
               <h3 className='greeting'>Hi, I'm Patti Anil Reddy </h3>
-              <p className='hero-discription'> A passionate Computer Science student pursuing BTech at Vardhaman 
-                College of Engineering with a stellar 9.4 CGPA. Specializing in full-stack web development with React.js,
-                 React Native, and modern JavaScript. Building innovative e-commerce platforms and mobile applications while 
-                 continuously learning cutting-edge technologies.
-               </p>
-              
+              <p className='hero-discription'>
+                   I'm a Computer Science student at Vardhaman College of Engineering with a strong academic record (9.4 CGPA) and a passion for building modern web and mobile experiences.  
+                 Skilled in <b>React.js</b>, <b>React Native</b>, and <b>JavaScript</b>, I focus on crafting fast, responsive, and user-friendly applications.  
+                 From developing <b>e-commerce platforms</b> to creating <b>real-time mobile apps</b>, I enjoy turning creative ideas into impactful digital solutions while exploring the latest in full-stack development.
+              </p>
+                          
                 
                 <button href="#contact" className="contact-button">contact</button>
               

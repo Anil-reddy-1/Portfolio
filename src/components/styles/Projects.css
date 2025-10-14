@@ -51,6 +51,7 @@
 
 .wf-box:hover {
   transform: translateY(-10px);
+  border-color:  rgb(23, 122, 242);
     box-shadow:
         0 2px 8px rgba(59,157,249,0.10),
         0 8px 24px rgba(59,157,249,0.18),

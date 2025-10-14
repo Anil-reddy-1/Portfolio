@@ -45,10 +45,10 @@ function MyJourney() {
   },[])
 
   const {journeySteps}=Data;
- console.log(journeySteps);
+
   return (
     <div className='section journey-section'>
-      <h1>My Learning Journey</h1>
+      <h1 className='Tittle'>My Learning Journey</h1>
       <div className='block' >
         {journeySteps.map((item,index)=>
           ( <div className="step" key={index}><div  className='text'>{item}</div></div>)

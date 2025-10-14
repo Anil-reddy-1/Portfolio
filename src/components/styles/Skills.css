@@ -58,6 +58,10 @@
     letter-spacing:.5px; 
     transition: transform 0.2s ease-in-out;
 }
+.tag img {
+    background-color: white;
+    object-fit: fill;
+}
 
 .tag:hover { 
     transform: scale(1.15);

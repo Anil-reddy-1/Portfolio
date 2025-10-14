@@ -79,7 +79,11 @@ body {
   border-radius: 10px;
   
 }
+.Tittle{
+  font-size: 1.8rem;
+  font-weight: 700;
 
+}
 
 
 .btn-row { display: flex; gap: 0.75rem; margin-top: 1rem; }
