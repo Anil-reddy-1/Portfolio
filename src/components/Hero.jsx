@@ -76,7 +76,7 @@ function Hero() {
                  Skilled in <b>React.js</b>, <b>React Native</b>, and <b>JavaScript</b>, I focus on crafting fast, responsive, and user-friendly applications.  
                  From developing <b>e-commerce platforms</b> to creating <b>real-time mobile apps</b>, I enjoy turning creative ideas into impactful digital solutions while exploring the latest in full-stack development.
               </p>
-                          
+                           
                 
                 <button href="#contact" className="contact-button">contact</button>
               

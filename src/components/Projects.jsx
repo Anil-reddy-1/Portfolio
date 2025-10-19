@@ -43,7 +43,7 @@ const {projectsData}=data;
   });
 });
   },[])
-
+ 
 
   useEffect(() => {
     const cards = document.querySelectorAll('.project-card'); // Fixed: Added dot

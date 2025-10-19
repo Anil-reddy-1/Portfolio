@@ -25,7 +25,6 @@ useGSAP(()=>{
       grid:[2,1],
       amount:0.2,
     },
-    
     ease:"back.out(1.7)"
   }
 )
@@ -59,7 +58,7 @@ tl.call(()=>{
       <h1 className='Tittle'>Experience</h1>
         <div className='exp-container'>
 
-          <div className="card">
+          <div className="exp-card card">
             <img src={certificate} alt="certificate" className='certificate'  />
             <div className="exp-title">
               <h3>ElevateLabs Frontend Intern</h3>
@@ -67,7 +66,7 @@ tl.call(()=>{
             </div>
           </div>
 
-          <div className="card">
+          <div className="exp-card card">
             <img src={certificate} alt="certificate" className='certificate'  />
             <div className="exp-title">
               <h3>ElevateLabs Frontend Intern</h3>
@@ -75,7 +74,7 @@ tl.call(()=>{
             </div>
           </div>
 
-          <div className="card">
+          <div className="exp-card card">
             <img src={certificate} alt="certificate" className='certificate'  />
             <div className="exp-title">
               <h3>ElevateLabs Frontend Intern</h3>
@@ -83,7 +82,7 @@ tl.call(()=>{
             </div>
           </div>
 
-          <div className="card">
+          <div className="exp-card card">
             <img src={certificate} alt="certificate" className='certificate'  />
             <div className="exp-title">
               <h3>ElevateLabs Frontend Intern</h3>

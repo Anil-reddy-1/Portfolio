@@ -38,7 +38,7 @@ function Skills() {
                   </div>
                   <div  className="tag">
                     <img src={logos.CSS} alt='CSS' className='tag-img' />
-                  </div>
+                  </div> 
                           
               </div>
               </div>

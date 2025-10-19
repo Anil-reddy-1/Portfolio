@@ -46,6 +46,8 @@ const journeySteps = [
   "Learned Object-Oriented Programming concepts through Java",
   "Dived into React.js for modern component-based development",
   "Expanded to React Native & Expo for cross-platform mobile apps",
-  "Currently mastering backend technologies parallel with Data Structures & Algorithms"
+  "Currently mastering backend technologies parallel with Data Structures & Algorithms",
+  "  ",
+  "' "
 ];
  export default{ projectsData:projectsData,journeySteps:journeySteps,skillsData:skillsData};

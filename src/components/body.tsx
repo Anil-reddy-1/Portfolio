@@ -24,7 +24,7 @@ function Body() {
 
   return (
 
-    <div className= {Theme?.theme=='Dark'?"layout dark":"layout "} style={{ position: 'relative', minHeight: '100vh' }}>
+    <div className= {Theme?.theme=='Dark'?"layout dark":"layout Bright"} style={{ position: 'relative', minHeight: '100vh' }}>
       
       
       <div style={{ position: 'relative', zIndex: 1 }}>

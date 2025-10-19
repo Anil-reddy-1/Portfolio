@@ -19,7 +19,7 @@ function Contact() {
                 <textarea rows={4} placeholder="Hi..." />
               </div>
               <div className="actions field">
-                <button type="submit" >Send</button>
+                <button type="submit"  >Send</button>
               </div>
             </form>
           </div>
