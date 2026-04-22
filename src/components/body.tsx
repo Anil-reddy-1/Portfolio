@@ -4,7 +4,7 @@ import Projects from './Projects';
 import Exp from './Exp';
 import Skills from './Skills';
 import Footer from './Footer';
-import Contact from './contact';
+import Contact from './Contact';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/all';
