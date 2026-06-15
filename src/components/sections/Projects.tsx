@@ -66,14 +66,7 @@ export default function Projects() {
             {projectsData.map((project) => (
               <div 
                 key={project.id} 
-                className="embla__slide" 
-                style={{ 
-                  flex: '0 0 100%', 
-                  minWidth: 0,
-                  maxWidth: '500px',
-                  '@media (min-width: 768px)': { flex: '0 0 calc(50% - 1rem)' },
-                  '@media (min-width: 1024px)': { flex: '0 0 calc(33.333% - 1.33rem)' }
-                }}
+                className="embla__slide project-slide" 
               >
                 <div style={{ 
                   background: 'var(--card)', 
@@ -99,7 +92,7 @@ export default function Projects() {
                       ))}
                     </div>
 
-                    <div style={{ display: 'flex', gap: '1rem' }}>
+                    <div className="project-links">
                       <a href={project.github} target="_blank" rel="noreferrer" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.9rem', fontWeight: 600, color: 'var(--foreground)' }}>
                         <Code size={18} /> Code
                       </a>

@@ -18,9 +18,9 @@ export default function About() {
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
         >
-          <h2 style={{ fontSize: '2.5rem', marginBottom: '2rem', textAlign: 'center' }}>About Me</h2>
+          <h2 style={{ marginBottom: '2rem', textAlign: 'center' }}>About Me</h2>
           
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '3rem', alignItems: 'center' }}>
+          <div className="about-grid">
             <div style={{ background: 'var(--card)', padding: '2.5rem', borderRadius: '1rem', border: '1px solid var(--border)' }}>
               <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem', color: 'var(--foreground)' }}>My Journey</h3>
               <p style={{ marginBottom: '1.5rem' }}>
@@ -31,7 +31,7 @@ export default function About() {
               </p>
             </div>
 
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem' }}>
+            <div className="stats-grid">
               <div style={{ background: 'var(--card)', padding: '2rem', borderRadius: '1rem', border: '1px solid var(--border)', textAlign: 'center' }}>
                 <h4 style={{ fontSize: '3rem', fontWeight: 700, color: 'var(--foreground)', marginBottom: '0.5rem' }}>
                   {inView ? <CountUp end={3} duration={2.5} /> : '0'}

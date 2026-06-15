@@ -7,7 +7,7 @@ import { personalInfo } from '../../data/data';
 export default function Hero() {
   return (
     <section id="hero" style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', paddingTop: '6rem', paddingBottom: '2rem' }}>
-      <div className="container" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem', alignItems: 'center' }}>
+      <div className="container hero-grid">
 
         {/* Text Content */}
         <motion.div
@@ -25,7 +25,7 @@ export default function Hero() {
             Welcome to my portfolio
           </motion.p>
 
-          <h1 style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)', fontWeight: 800, lineHeight: 1.1 }}>
+          <h1 style={{ fontWeight: 800, lineHeight: 1.1 }}>
             Hi, I'm <br />
             <span style={{ color: 'var(--foreground)' }}>{personalInfo.name}</span>
           </h1>
@@ -47,7 +47,7 @@ export default function Hero() {
             {personalInfo.summary}
           </p>
 
-          <div style={{ display: 'flex', gap: '1rem', marginTop: '1rem' }}>
+          <div className="action-buttons">
             <motion.a 
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -89,8 +89,8 @@ export default function Hero() {
           {/* Abstract glowing background effect */}
           <div style={{
             position: 'absolute',
-            width: '300px',
-            height: '300px',
+            width: '80%',
+            height: '80%',
             background: 'radial-gradient(circle, rgba(100,100,250,0.1) 0%, rgba(0,0,0,0) 70%)',
             borderRadius: '50%',
             filter: 'blur(40px)',
