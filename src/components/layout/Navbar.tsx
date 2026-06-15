@@ -55,7 +55,7 @@ export default function Navbar() {
         </a>
 
         {/* Desktop Nav */}
-        <nav style={{ display: 'none' }} className="md-flex">
+        <nav className="desktop-nav">
           <ul style={{ display: 'flex', gap: '2rem', listStyle: 'none', alignItems: 'center' }}>
             {navItems.map((item) => (
               <li key={item.name}>
@@ -76,7 +76,7 @@ export default function Navbar() {
         </nav>
 
         {/* Mobile Toggle */}
-        <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }} className="md-hidden">
+        <div className="mobile-nav">
           <button onClick={toggleTheme} style={{ color: 'var(--foreground)', display: 'flex', alignItems: 'center' }}>
             {theme === 'Dark' ? <Sun size={20} /> : <Moon size={20} />}
           </button>

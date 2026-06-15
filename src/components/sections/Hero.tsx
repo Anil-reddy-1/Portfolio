@@ -6,17 +6,17 @@ import { personalInfo } from '../../data/data';
 
 export default function Hero() {
   return (
-    <section id="hero" className="section" style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', paddingTop: '8rem' }}>
-      <div className="container" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '4rem', alignItems: 'center' }}>
-        
+    <section id="hero" style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', paddingTop: '6rem', paddingBottom: '2rem' }}>
+      <div className="container" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem', alignItems: 'center' }}>
+
         {/* Text Content */}
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}
+          style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}
         >
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
@@ -24,9 +24,9 @@ export default function Hero() {
           >
             Welcome to my portfolio
           </motion.p>
-          
+
           <h1 style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)', fontWeight: 800, lineHeight: 1.1 }}>
-            Hi, I'm <br/>
+            Hi, I'm <br />
             <span style={{ color: 'var(--foreground)' }}>{personalInfo.name}</span>
           </h1>
 
@@ -43,7 +43,7 @@ export default function Hero() {
             />
           </div>
 
-          <p style={{ fontSize: '1.1rem', maxWidth: '600px', lineHeight: 1.6 }}>
+          <p style={{ fontSize: '1rem', maxWidth: '600px', lineHeight: 1.6 }}>
             {personalInfo.summary}
           </p>
 
@@ -52,7 +52,7 @@ export default function Hero() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               href="#contact" 
-              style={{ padding: '0.75rem 2rem', background: 'var(--primary)', color: 'var(--primary-foreground)', borderRadius: 'var(--radius)', fontWeight: 600 }}
+              style={{ padding: '0.75rem 2rem', background: 'var(--foreground)', color: 'var(--background)', borderRadius: 'var(--radius)', fontWeight: 600, display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}
             >
               Contact Me
             </motion.a>
@@ -60,7 +60,7 @@ export default function Hero() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               href="#projects" 
-              style={{ padding: '0.75rem 2rem', background: 'transparent', color: 'var(--foreground)', border: '1px solid var(--border)', borderRadius: 'var(--radius)', fontWeight: 600 }}
+              style={{ padding: '0.75rem 2rem', background: 'transparent', color: 'var(--foreground)', border: '1px solid var(--border)', borderRadius: 'var(--radius)', fontWeight: 600, display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}
             >
               View Projects
             </motion.a>
@@ -84,22 +84,42 @@ export default function Hero() {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.3 }}
-          style={{ position: 'relative', display: 'flex', justifyContent: 'center' }}
+          style={{ position: 'relative', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '2rem' }}
         >
-          <div style={{ 
-            width: '100%', 
-            maxWidth: '400px', 
-            aspectRatio: '1/1', 
-            borderRadius: '2rem', 
-            background: 'linear-gradient(45deg, var(--border), var(--background))',
-            boxShadow: '0 20px 40px -10px rgba(0,0,0,0.1)',
-            overflow: 'hidden'
-          }}>
-            {/* Replace with actual profile picture */}
-             <div style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--muted-foreground)' }}>
-                [ Profile Image ]
+          {/* Abstract glowing background effect */}
+          <div style={{
+            position: 'absolute',
+            width: '300px',
+            height: '300px',
+            background: 'radial-gradient(circle, rgba(100,100,250,0.1) 0%, rgba(0,0,0,0) 70%)',
+            borderRadius: '50%',
+            filter: 'blur(40px)',
+            zIndex: 0
+          }}></div>
+
+          <motion.div 
+            animate={{ y: [-10, 10, -10] }}
+            transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
+            style={{ 
+              position: 'relative',
+              width: '100%', 
+              maxWidth: '350px', 
+              aspectRatio: '1/1', 
+              borderRadius: '50%', 
+              background: 'linear-gradient(135deg, var(--secondary) 0%, var(--background) 100%)',
+              border: '1px solid var(--border)',
+              boxShadow: '0 25px 50px -12px rgba(0,0,0,0.1)',
+              overflow: 'hidden',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              zIndex: 1
+            }}>
+             <div style={{ textAlign: 'center', color: 'var(--muted-foreground)' }}>
+                <div style={{ width: '80px', height: '80px', background: 'var(--muted)', borderRadius: '50%', margin: '0 auto 1rem auto' }}></div>
+                <p style={{ fontSize: '0.9rem', fontWeight: 500 }}>Your Photo Here</p>
              </div>
-          </div>
+          </motion.div>
         </motion.div>
 
       </div>

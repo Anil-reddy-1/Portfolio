@@ -91,6 +91,24 @@ button {
   border-bottom: 1px solid rgba(var(--border), 0.4);
 }
 
+.desktop-nav {
+  display: none;
+}
+.mobile-nav {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .desktop-nav {
+    display: block;
+  }
+  .mobile-nav {
+    display: none;
+  }
+}
+
 .container {
   width: 100%;
   max-width: 1200px;
