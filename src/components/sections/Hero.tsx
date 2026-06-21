@@ -33,8 +33,9 @@ export default function Hero() {
             <TypeAnimation
               sequence={[
                 'Full-Stack Developer', 1000,
-                'AI Applications Builder', 1000,
-                'Real-Time Systems Engineer', 1000,
+                'Building Scalable Web Applications', 1000,
+                'Exploring Generative AI', 1000,
+                'Crafting Meaningful User Experiences', 1000,
               ]}
               wrapper="span"
               speed={50}
