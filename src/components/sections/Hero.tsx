@@ -47,18 +47,18 @@ export default function Hero() {
           </p>
 
           <div className="action-buttons">
-            <motion.a 
+            <motion.a
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              href="#contact" 
+              href="#contact"
               style={{ padding: '0.75rem 2rem', background: 'var(--foreground)', color: 'var(--background)', borderRadius: 'var(--radius)', fontWeight: 600, display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}
             >
               Contact Me
             </motion.a>
-            <motion.a 
+            <motion.a
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              href="#projects" 
+              href="#projects"
               style={{ padding: '0.75rem 2rem', background: 'transparent', color: 'var(--foreground)', border: '1px solid var(--border)', borderRadius: 'var(--radius)', fontWeight: 600, display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}
             >
               View Projects
@@ -69,10 +69,10 @@ export default function Hero() {
             <a href="https://github.com/Anil-reddy-1" target="_blank" rel="noreferrer" style={{ color: 'var(--muted-foreground)' }}>
               <Code size={24} />
             </a>
-            <a href="https://linkedin.com/" target="_blank" rel="noreferrer" style={{ color: 'var(--muted-foreground)' }}>
+            <a href="https://www.linkedin.com/in/anil-reddy-li/" target="_blank" rel="noreferrer" style={{ color: 'var(--muted-foreground)' }}>
               <Globe size={24} />
             </a>
-            <a href="mailto:example@gmail.com" style={{ color: 'var(--muted-foreground)' }}>
+            <a href="mailto:anilreddy5251@gmail.com" style={{ color: 'var(--muted-foreground)' }}>
               <Mail size={24} />
             </a>
           </div>
@@ -96,15 +96,15 @@ export default function Hero() {
             zIndex: 0
           }}></div>
 
-          <motion.div 
+          <motion.div
             animate={{ y: [-10, 10, -10] }}
             transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
-            style={{ 
+            style={{
               position: 'relative',
-              width: '100%', 
-              maxWidth: '350px', 
-              aspectRatio: '1/1', 
-              borderRadius: '50%', 
+              width: '100%',
+              maxWidth: '350px',
+              aspectRatio: '1/1',
+              borderRadius: '50%',
               background: 'linear-gradient(135deg, var(--secondary) 0%, var(--background) 100%)',
               border: '1px solid var(--border)',
               boxShadow: '0 25px 50px -12px rgba(0,0,0,0.1)',
@@ -114,10 +114,9 @@ export default function Hero() {
               justifyContent: 'center',
               zIndex: 1
             }}>
-             <div style={{ textAlign: 'center', color: 'var(--muted-foreground)' }}>
-                <div style={{ width: '80px', height: '80px', background: 'var(--muted)', borderRadius: '50%', margin: '0 auto 1rem auto' }}></div>
-                <p style={{ fontSize: '0.9rem', fontWeight: 500 }}>Your Photo Here</p>
-             </div>
+            <div style={{ width: '100%', height: '100%', borderRadius: '50%', overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <img src="/Profile.png" alt="Profile" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+            </div>
           </motion.div>
         </motion.div>
 

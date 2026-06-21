@@ -77,8 +77,8 @@ export default function Projects() {
                   display: 'flex',
                   flexDirection: 'column'
                 }}>
-                  <div style={{ height: '200px', background: 'var(--muted)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                    <span style={{ color: 'var(--muted-foreground)', fontWeight: 500 }}>Project Image</span>
+                  <div style={{ height: '200px', background: 'var(--muted)', overflow: 'hidden' }}>
+                    <img src={project.image} alt={project.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                   </div>
                   <div style={{ padding: '2rem', flex: 1, display: 'flex', flexDirection: 'column' }}>
                     <h3 style={{ fontSize: '1.5rem', marginBottom: '0.5rem', color: 'var(--foreground)' }}>{project.title}</h3>

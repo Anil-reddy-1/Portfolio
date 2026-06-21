@@ -1,68 +1,76 @@
 export const personalInfo = {
   name: "Patti Anil Reddy",
-  role: "Computer Science Undergraduate",
-  tagline: "Full-Stack Developer | Real-Time Systems | AI-Powered Applications",
+  role: "Full-Stack Developer",
+  tagline: "Building scalable web applications, real-time systems, and AI-powered experiences.",
   cgpa: "9.4",
-  summary: `Computer Science undergraduate with hands-on experience in Full-Stack Development, Real-Time Systems, and AI-powered applications. Proficient in Next.js, React, React Native, Node.js, Express.js, TypeScript, Firebase, MongoDB, and modern web technologies. Passionate about building innovative products, solving complex engineering challenges, and leveraging AI to create impactful user experiences.`,
+  summary: `Computer Science undergraduate with hands-on experience in Full-Stack Development, Real-Time Systems, and AI-powered applications. Proficient in Next.js, React, React Native, Node.js, Express.js, TypeScript, Firebase, MongoDB, and modern web technologies. Passionate about building innovative products, solving complex engineering challenges, and leveraging AI to create impactful user experiences.`
 };
 
 export const skillsData = {
-  "Languages": ["TypeScript", "JavaScript (ES6+)", "Java", "Python"],
-  "Frontend": ["React.js", "Next.js", "React Native", "HTML5 / CSS3", "Responsive Design"],
-  "Backend": ["Node.js", "Express.js", "Firebase", "MongoDB"],
-  "AI & Data": ["Generative AI", "RAG Pipeline", "Vector Databases", "Semantic Search"],
-  "Systems": ["WebRTC", "Socket.IO", "System Design", "REST APIs", "Cloud Services"],
+  "Languages": ["JavaScript", "TypeScript", "Java", "Python"],
+  "Frontend": ["Next.js", "React.js", "React Native", "Tailwind CSS", "HTML5", "CSS3"],
+  "Backend": ["Node.js", "Express.js", "REST APIs", "Firebase"],
+  "Databases": ["MongoDB", "Firebase Firestore", "Supabase"],
+  "AI & GenAI": ["Generative AI", "RAG", "Embeddings", "Semantic Search", "Vector Databases"],
+  "Real-Time Systems": ["WebRTC", "Socket.IO"],
+  "Tools": ["Git", "GitHub", "Postman", "Android Studio", "VS Code"]
 };
-
-export const projectsData = [
-  {
-    id: "agent-ascend",
-    title: "Agent Ascend",
-    shortDescription: "Multi-model AI orchestration platform with intelligent routing.",
-    description: "A multi-model AI orchestration platform that intelligently routes tasks across OpenAI, Anthropic Claude, and Google Gemini models using prompt classification, task decomposition, and cost optimization. Includes token analytics, secure AES-256 encrypted API key management, fallback mechanisms, and interactive execution visualization.",
-    tech: ["React", "Node.js", "GenAI", "AES-256 Encryption"],
-    github: "https://github.com/Anil-reddy-1", 
-    demo: "#"
-  },
-  {
-    id: "jrguide",
-    title: "JrGuide",
-    shortDescription: "Enterprise employee onboarding platform with an AI assistant.",
-    description: "Enterprise employee onboarding platform featuring role-based access control, automated onboarding workflows, document verification, analytics dashboards, real-time notifications, and automated email reminders. Includes a RAG-powered AI assistant leveraging Google Gemini, embeddings, semantic search, and Firestore vector databases.",
-    tech: ["Next.js", "Firebase", "Google Gemini", "Vector DB"],
-    github: "https://github.com/Anil-reddy-1",
-    demo: "#"
-  },
-  {
-    id: "peernova",
-    title: "PeerNova",
-    shortDescription: "Full-stack tutoring platform with custom WebRTC video calls.",
-    description: "A full-stack tutoring platform supporting tutor discovery, session scheduling, and real-time chat. Features custom WebRTC-based peer-to-peer video communication with Socket.IO signaling, STUN/TURN infrastructure, screen sharing, and Firebase authentication.",
-    tech: ["React", "Node.js", "WebRTC", "Socket.IO", "Firebase"],
-    github: "https://github.com/Anil-reddy-1",
-    demo: "#"
-  }
-];
 
 export const experienceData = [
   {
     id: 1,
     role: "Full Stack Development Intern",
     company: "SkillGuru Foundation",
-    duration: "Present", 
+    duration: "Feb 2026 - May 2026",
     description: [
-      "Contributed to referral systems, REST API development, and user profile management.",
-      "Implemented real-time communication using Socket.IO, dashboard analytics, and student leaderboards.",
-      "Engineered educational diagram generation and AI-powered quiz generation using Generative AI and Retrieval-Augmented Generation (RAG).",
-      "Explored and integrated vector databases, semantic search, and AI retrieval systems for ed-tech applications."
+      "Developed and integrated referral systems, onboarding workflows, and user management features.",
+      "Built REST APIs and backend services using Express.js and Firebase Firestore.",
+      "Implemented real-time communication features using Socket.IO.",
+      "Worked on AI-powered quiz generation using Generative AI and RAG concepts.",
+      "Contributed to dashboard analytics, student leaderboards, educational diagrams, and notification systems.",
+      "Explored vector databases, semantic search, and AI retrieval pipelines for educational technology applications."
     ]
   }
 ];
 
+export const projectsData = [
+  {
+    id: "jrguide",
+    title: "JrGuide",
+    shortDescription: "AI-powered employee onboarding platform.",
+    description: "JrGuide is an enterprise onboarding platform designed to simplify and automate the employee onboarding experience. It features role-based access control, onboarding templates, document verification workflows, analytics dashboards, real-time notifications, and an AI assistant powered by Google Gemini, embeddings, and vector search.",
+    tech: ["Next.js", "TypeScript", "Firebase", "Socket.IO", "Google Gemini"],
+    github: "https://github.com/Anil-reddy-1/jrguide",
+    demo: "https://jrguide.vercel.app/login",
+    image: "/JRGuide.png"
+  },
+  {
+    id: "peernova",
+    title: "PeerNova",
+    shortDescription: "Peer-to-peer tutoring platform with live video sessions.",
+    description: "PeerNova connects students with peer tutors through real-time communication and video sessions. The platform includes tutor discovery, session scheduling, chat functionality, and a custom WebRTC implementation supporting audio, video, screen sharing, and Socket.IO-based signaling.",
+    tech: ["Next.js", "Firebase", "Socket.IO", "WebRTC"],
+    github: "https://github.com/Anil-reddy-1/peernova",
+    demo: "https://peernova.vercel.app/",
+    image: "/PeerNova.png"
+  },
+  {
+    id: "chat-app",
+    title: "Real-Time Chat Application",
+    shortDescription: "Cross-platform messaging application built with React Native.",
+    description: "A real-time chat application built using React Native, Node.js, MongoDB, and Socket.IO. It supports secure authentication, one-to-one messaging, online presence tracking, message persistence, and a responsive mobile-first user experience.",
+    tech: ["React Native", "Node.js", "MongoDB", "Socket.IO"],
+    github: "https://github.com/Anil-reddy-1/RNChatApp",
+    demo: "https://github.com/Anil-reddy-1/RNChatApp",
+    image: "/ChatApp.png"
+  }
+];
+
 export const journeySteps = [
-  "Built foundational software engineering skills and mastered Data Structures & Algorithms (9.4 CGPA).",
-  "Developed robust Full-Stack applications using React, Node.js, and MongoDB.",
-  "Engineered real-time communication systems leveraging WebRTC and Socket.IO.",
-  "Integrated advanced AI models (Gemini, Claude, OpenAI) into complex orchestration platforms.",
-  "Built enterprise-level applications with RAG pipelines, vector databases, and semantic search capabilities."
+  "Started with HTML, CSS, and JavaScript while exploring web development.",
+  "Built full-stack applications using React, Node.js, Express.js, and MongoDB.",
+  "Expanded into mobile development with React Native and Expo.",
+  "Developed real-time systems using Socket.IO and WebRTC.",
+  "Explored Generative AI, RAG pipelines, embeddings, and vector databases.",
+  "Currently focused on building scalable products that combine software engineering and AI."
 ];

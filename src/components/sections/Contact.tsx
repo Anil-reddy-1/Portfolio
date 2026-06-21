@@ -17,12 +17,14 @@ export default function Contact() {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate API call
-    setTimeout(() => {
-      toast.success('Message sent successfully!');
-      setFormData({ name: '', email: '', message: '' });
-      setIsSubmitting(false);
-    }, 1500);
+    const subject = encodeURIComponent(`Portfolio Contact from ${formData.name}`);
+    const body = encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`);
+    
+    window.location.href = `mailto:anilreddy5251@gmail.com?subject=${subject}&body=${body}`;
+    
+    toast.success('Opening mail client...');
+    setFormData({ name: '', email: '', message: '' });
+    setIsSubmitting(false);
   };
 
   return (
